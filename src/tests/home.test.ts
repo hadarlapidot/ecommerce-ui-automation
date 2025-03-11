@@ -25,7 +25,7 @@ test.describe('Add to Cart Scenarios', () => {
         chosenProducts.push(await homePage.addRandomProductToCart());
         const numOfAddedProducts = chosenProducts.length;
         // check the correct number of prodcuts is indicated at the cart icon
-        await expect(homePage.getNumOfProductsInCartIcon()).toEqual(numOfAddedProducts);
+        await expect(await homePage.getNumOfProductsInCartIcon()).toEqual(numOfAddedProducts);
         // Verify the product added is the correct product
         // click on the cart icon
         await homePage.openCart();
@@ -53,7 +53,7 @@ test.describe("Product Sorting Scenarios", () => {
     test('sort by name A-Z', async ({ page }: {page:Page}) => {
 
         // Select sorting option on the page
-        homePage.clickSort(SORT_OPTIONS.NAME_A_TO_Z);
+        await homePage.clickSort(SORT_OPTIONS.NAME_A_TO_Z);
 
         // Get products list after sorting → afterSort
         const afterSort: Locator[] = await homePage.getInventoryProducts();
@@ -74,7 +74,7 @@ test.describe("Product Sorting Scenarios", () => {
     test('sort by name Z-A', async ({ page }: {page:Page}) => {
 
         // Select sorting option on the page
-        homePage.clickSort(SORT_OPTIONS.NAME_Z_TO_A);
+        await homePage.clickSort(SORT_OPTIONS.NAME_Z_TO_A);
 
         // Get products list after sorting → afterSort
         const afterSort: Locator[] = await homePage.getInventoryProducts();
@@ -99,7 +99,7 @@ test.describe("Product Sorting Scenarios", () => {
     test('sort by price low to high', async ({ page }: {page:Page}) => {
 
         // Select sorting option on the page
-        homePage.clickSort(SORT_OPTIONS.PRICE_LOW_TO_HIGH);
+        await homePage.clickSort(SORT_OPTIONS.PRICE_LOW_TO_HIGH);
 
         // Get products list after sorting → afterSort
         const afterSort: Locator[] = await homePage.getInventoryProducts();
@@ -117,13 +117,14 @@ test.describe("Product Sorting Scenarios", () => {
         let arrayOfPricesSorted = [...arrayOfPrices].sort();
 
         // Verify both arrays are the same
+        console.log(`arrayOfPrices: ${arrayOfPrices}\narrayOfPricesSorted: ${arrayOfPricesSorted}`);
         expect(arrayOfPrices).toEqual(arrayOfPricesSorted);
     });
 
-    test.only('sort by price high to low', async ({ page }: {page:Page}) => {
+    test('sort by price high to low', async ({ page }: {page:Page}) => {
 
         // Select sorting option on the page
-        homePage.clickSort(SORT_OPTIONS.PRICE_HIGH_TO_LOW);
+        await homePage.clickSort(SORT_OPTIONS.PRICE_HIGH_TO_LOW);
 
         // Get products list after sorting → afterSort
         const afterSort: Locator[] = await homePage.getInventoryProducts();

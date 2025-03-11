@@ -47,7 +47,7 @@ export class HomePage {
         return Number(await this.numOfProductsInCartIcon.textContent());
     }
     async clickSort(option: string): Promise<void> {
-        await this.page.selectOption('[data-test="product-sort-container"]', option);
+        await this.page.selectOption('[data-test="product-sort-container"]', {value: option});
     }
     /**
      * Retrieves all inventory products as locators.
@@ -74,10 +74,12 @@ export class HomePage {
     };
     // FIX: returns '9.99$'! Get rid of '$'
     async getItemPrice(item: Locator): Promise<number> {
-        let fullText: string | null= await item.locator('[data-test="inventory-item-price"').textContent();
-        const price = Number(fullText?.match(/\d+\.\d\d/));
-        return price | 0;
-
+        let fullText: string | null= await item.locator('[data-test="inventory-item-price"]').textContent();
+        const price = fullText?.match(/\d+\.\d+/);
+        console.log(price);
+        if(price)
+            return parseFloat(price[1]);
+        return 0
     }
 }
 
