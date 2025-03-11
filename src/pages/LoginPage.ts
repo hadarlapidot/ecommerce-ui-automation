@@ -25,13 +25,13 @@ export class LoginPage {
         await this.loginButton.click();
     }
 
-        // getters
-        get err_msg(): Promise<string | null> {
-            return this.errorMessage.textContent();
-        }
-        get logoutBtn(): Locator{
-            return this.page.locator('#logout_sidebar_link')
-        }; 
+    // getters
+    async err_msg(): Promise<string | null> {
+        return this.errorMessage.textContent();
+    }
+    async logoutBtn(): Promise<Locator>{
+        return this.page.locator('#logout_sidebar_link')
+    }; 
 
 }
 
