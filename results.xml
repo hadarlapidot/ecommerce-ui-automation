@@ -1,0 +1,104 @@
+<testsuites id="" name="" tests="13" failures="1" skipped="0" errors="0" time="7.629902">
+<testsuite name="checkOut.test.ts" timestamp="2025-03-16T17:17:15.778Z" hostname="Desktop" tests="2" failures="1" skipped="0" time="6.776" errors="0">
+<testcase name="Checkout scenarios › Complete checkout flow with valid details and products in the cart" classname="checkOut.test.ts" time="1.708">
+</testcase>
+<testcase name="Checkout scenarios › Checkout with an empty cart" classname="checkOut.test.ts" time="5.068">
+<failure message="checkOut.test.ts:62:5 Checkout with an empty cart" type="FAILURE">
+<![CDATA[  [Desktop] › checkOut.test.ts:62:5 › Checkout scenarios › Checkout with an empty cart ─────────────
+
+    Test timeout of 5000ms exceeded.
+
+    Error: locator.textContent: Test timeout of 5000ms exceeded.
+    Call log:
+      - waiting for locator('h3').filter({ hasText: 'Error: Cart is empty' })
+
+
+       at ../pages/checkOutPage.ts:57
+
+      55 |
+      56 |     async cartIsEmptyError(): Promise<string>{
+    > 57 |         const errorMsg = await this.cartIsEmptyErrorSelector.textContent();
+         |                                                              ^
+      58 |         return errorMsg || 'No message was found'; 
+      59 |     }
+      60 | }
+        at CheckOutPage.cartIsEmptyError (/Users/hadarlapidot/Desktop/Portfolio/ecommerce-ui-automation/src/pages/checkOutPage.ts:57:62)
+        at /Users/hadarlapidot/Desktop/Portfolio/ecommerce-ui-automation/src/tests/checkOut.test.ts:70:31
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/checkOut-Checkout-scenarios-Checkout-with-an-empty-cart-Desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/checkOut-Checkout-scenarios-Checkout-with-an-empty-cart-Desktop/test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="home.test.ts" timestamp="2025-03-16T17:17:15.778Z" hostname="Desktop" tests="5" failures="0" skipped="0" time="4.865" errors="0">
+<testcase name="Add to Cart Scenarios › Add a single product to the cart" classname="home.test.ts" time="1.538">
+</testcase>
+<testcase name="Product Sorting Scenarios › sort by name A-Z" classname="home.test.ts" time="0.813">
+<system-out>
+<![CDATA[Sauce Labs Backpack
+Sauce Labs Bike Light
+Sauce Labs Bolt T-Shirt
+Sauce Labs Fleece Jacket
+Sauce Labs Onesie
+Test.allTheThings() T-Shirt (Red)
+]]>
+</system-out>
+</testcase>
+<testcase name="Product Sorting Scenarios › sort by name Z-A" classname="home.test.ts" time="0.855">
+<system-out>
+<![CDATA[Test.allTheThings() T-Shirt (Red)
+Sauce Labs Onesie
+Sauce Labs Fleece Jacket
+Sauce Labs Bolt T-Shirt
+Sauce Labs Bike Light
+Sauce Labs Backpack
+]]>
+</system-out>
+</testcase>
+<testcase name="Product Sorting Scenarios › sort by price low to high" classname="home.test.ts" time="0.821">
+<system-out>
+<![CDATA[[ [32m'7.99'[39m, index: [33m1[39m, input: [32m'$7.99'[39m, groups: [90mundefined[39m ]
+[ [32m'9.99'[39m, index: [33m1[39m, input: [32m'$9.99'[39m, groups: [90mundefined[39m ]
+[ [32m'15.99'[39m, index: [33m1[39m, input: [32m'$15.99'[39m, groups: [90mundefined[39m ]
+[ [32m'15.99'[39m, index: [33m1[39m, input: [32m'$15.99'[39m, groups: [90mundefined[39m ]
+[ [32m'29.99'[39m, index: [33m1[39m, input: [32m'$29.99'[39m, groups: [90mundefined[39m ]
+[ [32m'49.99'[39m, index: [33m1[39m, input: [32m'$49.99'[39m, groups: [90mundefined[39m ]
+arrayOfPrices: NaN,NaN,NaN,NaN,NaN,NaN
+arrayOfPricesSorted: NaN,NaN,NaN,NaN,NaN,NaN
+]]>
+</system-out>
+</testcase>
+<testcase name="Product Sorting Scenarios › sort by price high to low" classname="home.test.ts" time="0.838">
+<system-out>
+<![CDATA[[ [32m'49.99'[39m, index: [33m1[39m, input: [32m'$49.99'[39m, groups: [90mundefined[39m ]
+[ [32m'29.99'[39m, index: [33m1[39m, input: [32m'$29.99'[39m, groups: [90mundefined[39m ]
+[ [32m'15.99'[39m, index: [33m1[39m, input: [32m'$15.99'[39m, groups: [90mundefined[39m ]
+[ [32m'15.99'[39m, index: [33m1[39m, input: [32m'$15.99'[39m, groups: [90mundefined[39m ]
+[ [32m'9.99'[39m, index: [33m1[39m, input: [32m'$9.99'[39m, groups: [90mundefined[39m ]
+[ [32m'7.99'[39m, index: [33m1[39m, input: [32m'$7.99'[39m, groups: [90mundefined[39m ]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="login.test.ts" timestamp="2025-03-16T17:17:15.778Z" hostname="Desktop" tests="6" failures="0" skipped="0" time="5.614" errors="0">
+<testcase name="Login Functionality Scenarios › User can login with valid credentials" classname="login.test.ts" time="1.504">
+</testcase>
+<testcase name="Login Functionality Scenarios › User cannot login with invalid username" classname="login.test.ts" time="0.787">
+</testcase>
+<testcase name="Login Functionality Scenarios › User cannot login with invalid password" classname="login.test.ts" time="0.825">
+</testcase>
+<testcase name="Login Functionality Scenarios › Login with empty fields (username and password)" classname="login.test.ts" time="0.852">
+</testcase>
+<testcase name="Login Functionality Scenarios › Login with empty username" classname="login.test.ts" time="0.808">
+</testcase>
+<testcase name="Login Functionality Scenarios › Login with empty password" classname="login.test.ts" time="0.838">
+</testcase>
+</testsuite>
+</testsuites>

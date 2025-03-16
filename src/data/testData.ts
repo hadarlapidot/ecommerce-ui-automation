@@ -10,12 +10,12 @@ export const CREDENTIALS = {
 };
 
 export const URLS = {
-    LOGIN_PAGE: "https://www.saucedemo.com/",
-    INVENTORY_PAGE: "https://www.saucedemo.com/inventory.html",
-    CART_PAGE: "https://www.saucedemo.com/cart.html",
-    CHECK_OUT_STEP_ONE: "https://www.saucedemo.com/checkout-step-one.html",
-    CHECK_OUT_STEP_TWO: "https://www.saucedemo.com/checkout-step-two.html",
-    CHECK_OUT_COMPLETE: "https://www.saucedemo.com/checkout-complete.html"
+    LOGIN_PAGE: "/",
+    INVENTORY_PAGE: "/inventory.html",
+    CART_PAGE: "/cart.html",
+    CHECK_OUT_STEP_ONE: "/checkout-step-one.html",
+    CHECK_OUT_STEP_TWO: "/checkout-step-two.html",
+    CHECK_OUT_COMPLETE: "/checkout-complete.html"
 };
 
 export const ERRORS = {

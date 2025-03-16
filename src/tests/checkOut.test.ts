@@ -58,7 +58,7 @@ test.describe("Checkout scenarios", () => {
     expect(page).toHaveURL(URLS.INVENTORY_PAGE);
 });
 
-// TC010
+// TC010- demo failure
 test('Checkout with an empty cart', async ({ page }: { page: Page }) => {
     // step 1: open the cart without adding products
     homePage.openCart(); 

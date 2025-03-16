@@ -6,8 +6,8 @@
     "esModuleInterop": true, // Allows importing non-ESM packages
     "skipLibCheck": true, // Skip type checking of declaration files
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist", // Directory for compiled JS files
-    "rootDir": "./src" // Root directory for TypeScript files
+    "outDir": "dist", // Directory for compiled JS files
+    "rootDir": "src" // Root directory for TypeScript files
   },
   "include": ["src/**/*"], // Include all files in the src folder
   "exclude": ["node_modules"] // Exclude node_modules from compilation

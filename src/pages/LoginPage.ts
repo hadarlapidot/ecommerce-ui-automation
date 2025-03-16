@@ -1,5 +1,5 @@
 import { Locator, Page } from "playwright";
-const { expect } = require('@playwright/test');
+import except from '@playwright/test';
 
 export class LoginPage {
 

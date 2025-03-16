@@ -23,7 +23,7 @@ export class CheckOutPage {
         this.lastNameInput = page.getByPlaceholder("Last Name");
         this.zipcodeInput = page.getByPlaceholder("Zip/Postal Code");
         this.continueBtn = page.locator('#continue');
-        this.cartIsEmptyErrorSelector = page.locator('h3', {hasText: "Error: Cart is empty"});//There is no such element of course. I invented it just for the bug report...
+        this.cartIsEmptyErrorSelector = page.locator('h3', {hasText: "Error: Cart is empty"});//There is no such element of course. I made it up just for the bug report...
         // check out step two
         this.finishBtn = page.locator('button', { hasText: 'finish' });
         // check out completion
