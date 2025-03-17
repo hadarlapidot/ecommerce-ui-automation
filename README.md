@@ -9,7 +9,7 @@ This project contains end-to-end UI tests using Playwright to automate and valid
 - ✅ Remove Items from Cart
 - ✅ Basic Navigation (e.g., logout, shopping cart, product page)
 - ✅ Items Sorting
-- ✅ Screenshots captured after each test
+- ✅ Screenshots captured after failed tests
 
 ## 🧰 Tech Stack
 
@@ -51,3 +51,12 @@ npx playwright show-report
 Each test automatically captures a screenshot at the end of execution (Failure only). Screenshots are stored in the `/test-results` directory.
 
 ---
+
+## 🐞 Bug Report
+
+The test is intentionally failing due to a faulty test case (TC-009) that has been implemented. The bug report is available in the root directory.
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/33407e0b-5b42-4e5d-a778-f5b5f55c4820" />
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/df20cdfb-03e7-4fbf-9d5e-0813fd06796b" />
+
